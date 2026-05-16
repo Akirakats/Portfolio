@@ -18,6 +18,14 @@ header{
     padding: 20px;
 }
 
+.foto-perfil{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #2563eb;
+}
+
 nav{
     max-width: 1000px;
     display: flex;
@@ -53,6 +61,13 @@ main{
     padding: 30px 20px;
 }
 
+.sobre-box{
+    background-color: black;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 5px solid #2563eb;
+}
 section{
     background-color: black;
     margin-bottom: 25px;
@@ -85,6 +100,12 @@ button{
 
 button:hover{
   background-color: #1d4ed8;  
+}
+
+.icone-tecnologia{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
 .cards{
@@ -134,4 +155,35 @@ footer{
         font-size: 26px;
     }
 
+}
+/* TEMA CLARO */
+
+.tema-claro{
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.tema-claro header{
+    background-color: #111827;
+    color: white;
+}
+
+.tema-claro nav a{
+    color: white;
+}
+
+.tema-claro section{
+    background-color: white;
+    color: black;
+}
+
+.tema-claro .card,
+.tema-claro .projeto{
+    background-color: #e5e7eb;
+    color: black;
+}
+
+.tema-claro footer{
+    background-color: #111827;
+    color: white;
 }

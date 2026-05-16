@@ -9,56 +9,98 @@
 <body>
     <header>
         <nav>
-            <h1 class="saudação">Meu portfolio</h1>
-            <ul>
-                 <li><a href="#sobre">Sobre mim</a></li>
-            <li><a href="#tecnologias">Tecnologias</a></li>
-            <li><a href="">Projetos</a></li>
-            <li><a href="">Contato</a></li>
+            <h1>Meu portfolio</h1>
+           <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aprendizados.html">Aprendizados com IA</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
             </ul>
-           
+         <button id="botaoTema">Tema</button>  
         </nav>
     </header>
     <main>
         <section class="banner">
-            <h2 class="saudação">Olá, eu sou Fernando</h2>
+            <img class="foto-perfil" src="img/perfil.png" alt="Foto de perfil">
+            <h2>Olá, eu sou Fernando</h2>
             <p>Estou aprendendo desenvolvimento web e estou criando meu primeiro portfolio</p>
             <button type="button" onclick={alterarTexto()} id="botaoMensagem">Clique para ver uma mensagem</button>
             <p id="mensagem"></p>
         </section>
-        <section>
-            <h2>Sobre mim</h2>
-            <p>Sou estudante de tecnologia e estou desenvolvendo minhas habilidades em proramação</p>
-        
-            <section id="sobre">      
-            </section>
+        <section id="sobre" class="sobre-box">
+
+    <h2>Sobre mim</h2>
+
+    <p>
+        Sou estudante de tecnologia e estou desenvolvendo minhas habilidades em programação
+    </p>
+
+</section>
             <section id="tecnologias">
                 <h2>Tecnologias que estou aprendendo</h2>
-                <div class="card"> 
-                    <h3>CSS</h3>
-                    <p>Utilizado para estilizar e organizar o visual da páginas</p>
-                   
-                </div>
-                <section>
-                     <article class="card">
-                        <h3>Javascript</h3>
-                        <p>Utilizado para adicionar interatividade nas páginas</p>
+                <p id="tecnologiaSelecionada"></p>
+              <div class="cards">
 
-                    </article>
-                </section>
+    <article onclick="mostrarTecnologia('HTML')" class="card">
+        <img 
+            class="icone-tecnologia"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
+            alt="HTML"
+        >
+
+        <h3>HTML</h3>
+
+        <p>
+            É utilizado para estruturar o conteúdo das páginas
+        </p>
+    </article>
+
+    <article onclick="mostrarTecnologia('CSS')" class="card">
+        <img 
+            class="icone-tecnologia"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
+            alt="CSS"
+        >
+
+        <h3>CSS</h3>
+
+        <p>
+            Utilizado para estilizar e organizar o visual das páginas
+        </p>
+    </article>
+
+    <article onclick="mostrarTecnologia('JavaScript')" class="card">
+        <img 
+            class="icone-tecnologia"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
+            alt="Javascript"
+        >
+
+        <h3>Javascript</h3>
+
+        <p>
+            Utilizado para adicionar interatividade nas páginas
+        </p>
+    </article>
+
+</div>
             </section>
-            <section id="projetos">
-                <h2>Projetos</h2>
-                <article class="projeto">
-                    <h3>Meu primeiro portfolio</h3>
-                    <p>Projeto desenvolvido na primeira aula do curso, utilizando HTML, CSS e JavaScript</p>
-
+            
                 </article>
 
             </section>
-            <section id="contato">
-                <h2>Contato</h2>
-                <p>Linkedin; <a href="www.linkedin.com/in/fernando-katsurayama-555681144" target="_blank">Meu Linkedin</a></p>
+            <h2>Contato</h2>
+
+<p>
+    Linkedin:
+    
+    <a 
+        href="https://www.linkedin.com/in/fernando-katsurayama-555681144" 
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Meu Linkedin
+    </a>
+</p>
 
             </section>
     </main>
