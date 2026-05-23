@@ -114,9 +114,9 @@ function adicionarAprendizado(evento){
 
     const novoAprendizado = {
         tema: campoTema.value,
-        tema: campoPergunta.value,
-        tema: campoResposta.value,
-        tema: campoEntendimento.value,
+        pergunta: campoPergunta.value,
+        resposta: campoResposta.value,
+        entendimento: campoEntendimento.value,
     }
 
     aprendizados.push(novoAprendizado)
