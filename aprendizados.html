@@ -15,6 +15,7 @@
                 <li><a href="aprendizados.html">Aprendizados com IA</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
             </ul>
+             <button id="botaoTema">Tema</button>  
         </nav>
     </header>
 
@@ -22,7 +23,32 @@
         <section>
         <h2>Aprendizados com IA</h2>
             <p>Nesta página, registro dúvidas de programação que estudei com apoio de inteligência artificial generativa</p>
-        <p id="contadorAprendizados"></p>
+       
+        <form class="form-aprendizado" onsubmit="return adicionarAprendizado(event)">
+            <h3>Adicionar novo aprendizado</h3>
+
+            <label for="tema">Tema</label>
+            <select  id="tema">
+                <option value="Selecione">Selecione</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+
+            <label for="pergunta">pergunta</label>
+            <input type="text" id="pergunta" placeholder="Digte sua dúvida">
+
+            <label for="resposta">Resposta resumida</label>
+            <textarea  id="resposta" placeholder="Resumo da resposta da IA"></textarea>
+
+            <label for="entendimento">O que eu entendi</label>
+            <textarea  id="entendimento" placeholder="Explique com as suas palavras"></textarea>
+
+            <button type="submit">Adicionar Aprendizado</button>
+        </form>
+       
+       
+            <p id="contadorAprendizados"></p>
 
         <div class="filtros">
             <button onclick="filtrarAprendizados('Todos')">Todos</button>

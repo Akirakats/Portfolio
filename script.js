@@ -65,3 +65,63 @@ function renderizarAprendizados(lista) {
 
 renderizarAprendizados(aprendizados)
 
+
+function filtrarAprendizados(tema){
+    if (tema == "Todos"){
+        renderizarAprendizados(aprendizados)
+        return
+    }
+    else{
+        const filtrados = aprendizados.filter(function (item){
+            return item.tema == tema;
+        })
+
+        renderizarAprendizados(filtrados);
+    }
+}
+
+function mostrarOcultarAprendizados() {
+    const listaAprendizados = document.getElementById("listaAprendizados")
+    const botaoAprendizados = document.getElementById("botaoAprendizados")
+
+    listaAprendizados.classList.toggle("oculto")
+
+    if(listaAprendizados.classList.contains("oculto")){
+        botaoAprendizados.textContent = "Mostrar Aprendizados"
+    }
+    else{
+        botaoAprendizados.textContent = "Ocultar Aprendizados"
+    }
+}
+
+function adicionarAprendizado(evento){
+    evento.preventDefault()
+
+    const campoTema = document.getElementById("tema")
+    const campoPergunta = document.getElementById("pergunta")
+    const campoResposta = document.getElementById("resposta")
+    const campoEntendimento = document.getElementById("entendimento")
+
+    if(
+        campoTema.value == "" ||
+        campoPergunta.value == "" ||
+        campoResposta.value == "" ||
+        campoEntendimento.value == "" 
+     ) {
+        alert("Preencha todos os campos antes de adicionar.")
+        return false;
+    }
+
+    const novoAprendizado = {
+        tema: campoTema.value,
+        tema: campoPergunta.value,
+        tema: campoResposta.value,
+        tema: campoEntendimento.value,
+    }
+
+    aprendizados.push(novoAprendizado)
+
+    renderizarAprendizados(aprendizados)
+
+    return false
+}
